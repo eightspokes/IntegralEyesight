@@ -48,6 +48,6 @@ struct VideoCardView: View {
 
 #Preview {
     VideoCardView(video: Video.ExampleVideo)
-        .environmentObject(VimeoViewModel())
+        .environmentObject(VimeoViewModel(service: VimeoService()))
 
 }

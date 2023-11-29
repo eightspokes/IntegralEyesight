@@ -58,5 +58,5 @@ struct VideoView: View {
 
 #Preview {
     VideoView(video: Video.ExampleVideo)
-        .environmentObject(VimeoViewModel())
+        .environmentObject(VimeoViewModel(service: VimeoService()))
 }

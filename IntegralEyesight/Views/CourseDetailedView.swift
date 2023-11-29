@@ -40,5 +40,5 @@ struct CourseDetailedView: View {
 }
 #Preview {
     CourseDetailedView(courseName: "Instructional Videos", videosUri: "users/47826142/projects/18611365")
-        .environmentObject(VimeoViewModel())
+        .environmentObject(VimeoViewModel(service: VimeoService()))
 }

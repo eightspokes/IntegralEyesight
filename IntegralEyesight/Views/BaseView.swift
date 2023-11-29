@@ -39,7 +39,7 @@ struct BaseView: View {
 #Preview {
     Group{
         BaseView()
-            .environmentObject(VimeoViewModel())
+            .environmentObject(VimeoViewModel(service: VimeoService()))
             .environmentObject(FavoriteVideosViewModel())
             .preferredColorScheme(.dark)
         

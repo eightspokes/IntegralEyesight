@@ -33,6 +33,7 @@
 		3AC9EB552B15662600CDC88F /* FavoriteVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB542B15662600CDC88F /* FavoriteVideosViewModel.swift */; };
 		3AC9EB572B16C5FA00CDC88F /* VimeoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB562B16C5FA00CDC88F /* VimeoServiceProtocol.swift */; };
 		3AC9EB5A2B16C79300CDC88F /* VimeoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB592B16C79300CDC88F /* VimeoService.swift */; };
+		3AC9EB5D2B16DF5500CDC88F /* MockVimeoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB5B2B16DF2600CDC88F /* MockVimeoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		3AC9EB542B15662600CDC88F /* FavoriteVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideosViewModel.swift; sourceTree = "<group>"; };
 		3AC9EB562B16C5FA00CDC88F /* VimeoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoServiceProtocol.swift; sourceTree = "<group>"; };
 		3AC9EB592B16C79300CDC88F /* VimeoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoService.swift; sourceTree = "<group>"; };
+		3AC9EB5B2B16DF2600CDC88F /* MockVimeoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockVimeoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +237,7 @@
 		3AC9EB582B16C67F00CDC88F /* VimeoService */ = {
 			isa = PBXGroup;
 			children = (
+				3AC9EB5B2B16DF2600CDC88F /* MockVimeoService.swift */,
 				3AC9EB332B10EEEC00CDC88F /* VimeoViewModel.swift */,
 				3AC9EB562B16C5FA00CDC88F /* VimeoServiceProtocol.swift */,
 				3AC9EB592B16C79300CDC88F /* VimeoService.swift */,
@@ -420,6 +423,7 @@
 				3AC9EB2D2B0A992600CDC88F /* FavoritesView.swift in Sources */,
 				3AC9EB4F2B140A9900CDC88F /* VideoView.swift in Sources */,
 				3AC9EB5A2B16C79300CDC88F /* VimeoService.swift in Sources */,
+				3AC9EB5D2B16DF5500CDC88F /* MockVimeoService.swift in Sources */,
 				3AC9EB4D2B13FAA700CDC88F /* VideoCardView.swift in Sources */,
 				3AC9EB342B10EEEC00CDC88F /* VimeoViewModel.swift in Sources */,
 				3AC9EB362B10EFD000CDC88F /* ProgressView.swift in Sources */,

@@ -65,7 +65,7 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
-        .environmentObject(VimeoViewModel())
+        .environmentObject(VimeoViewModel(service: VimeoService()))
         .preferredColorScheme(.dark)
 
 }
