@@ -8,12 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		3AC9EAF72B003D8B00CDC88F /* IntegralEyesightApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EAF62B003D8B00CDC88F /* IntegralEyesightApp.swift */; };
-		3AC9EAF92B003D8B00CDC88F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EAF82B003D8B00CDC88F /* ContentView.swift */; };
+		3AC9EAF92B003D8B00CDC88F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EAF82B003D8B00CDC88F /* BaseView.swift */; };
 		3AC9EAFB2B003D8C00CDC88F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9EAFA2B003D8C00CDC88F /* Assets.xcassets */; };
 		3AC9EAFF2B003D8C00CDC88F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9EAFE2B003D8C00CDC88F /* Preview Assets.xcassets */; };
 		3AC9EB092B003D8C00CDC88F /* IntegralEyesightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB082B003D8C00CDC88F /* IntegralEyesightTests.swift */; };
 		3AC9EB132B003D8C00CDC88F /* IntegralEyesightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB122B003D8C00CDC88F /* IntegralEyesightUITests.swift */; };
 		3AC9EB152B003D8C00CDC88F /* IntegralEyesightUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB142B003D8C00CDC88F /* IntegralEyesightUITestsLaunchTests.swift */; };
+		3AC9EB232B0A75E500CDC88F /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB222B0A75E500CDC88F /* ColorTheme.swift */; };
+		3AC9EB292B0A80EE00CDC88F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB282B0A80EE00CDC88F /* HomeView.swift */; };
+		3AC9EB2D2B0A992600CDC88F /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB2C2B0A992600CDC88F /* FavoritesView.swift */; };
+		3AC9EB322B10ECD300CDC88F /* Vimeo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9EB312B10ECD300CDC88F /* Vimeo-Info.plist */; };
+		3AC9EB342B10EEEC00CDC88F /* VimeoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB332B10EEEC00CDC88F /* VimeoViewModel.swift */; };
+		3AC9EB362B10EFD000CDC88F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB352B10EFD000CDC88F /* ProgressView.swift */; };
+		3AC9EB382B10F1A400CDC88F /* VimeoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB372B10F1A400CDC88F /* VimeoData.swift */; };
+		3AC9EB3D2B1143C100CDC88F /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB3C2B1143C100CDC88F /* CourseView.swift */; };
+		3AC9EB402B1144CE00CDC88F /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB3F2B1144CE00CDC88F /* CourseCardView.swift */; };
+		3AC9EB422B129A3300CDC88F /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB412B129A3300CDC88F /* ProfilePictureView.swift */; };
+		3AC9EB442B129F3B00CDC88F /* AnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB432B129F3B00CDC88F /* AnnouncementView.swift */; };
+		3AC9EB472B13982000CDC88F /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB462B13982000CDC88F /* ProfileView.swift */; };
+		3AC9EB492B139A0B00CDC88F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB482B139A0B00CDC88F /* Extensions.swift */; };
+		3AC9EB4B2B139E6900CDC88F /* CourseDetailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB4A2B139E6900CDC88F /* CourseDetailedView.swift */; };
+		3AC9EB4D2B13FAA700CDC88F /* VideoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB4C2B13FAA700CDC88F /* VideoCardView.swift */; };
+		3AC9EB4F2B140A9900CDC88F /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB4E2B140A9900CDC88F /* VideoView.swift */; };
+		3AC9EB552B15662600CDC88F /* FavoriteVideosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB542B15662600CDC88F /* FavoriteVideosViewModel.swift */; };
+		3AC9EB572B16C5FA00CDC88F /* VimeoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB562B16C5FA00CDC88F /* VimeoServiceProtocol.swift */; };
+		3AC9EB5A2B16C79300CDC88F /* VimeoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB592B16C79300CDC88F /* VimeoService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +55,7 @@
 /* Begin PBXFileReference section */
 		3AC9EAF32B003D8B00CDC88F /* IntegralEyesight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntegralEyesight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC9EAF62B003D8B00CDC88F /* IntegralEyesightApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegralEyesightApp.swift; sourceTree = "<group>"; };
-		3AC9EAF82B003D8B00CDC88F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3AC9EAF82B003D8B00CDC88F /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		3AC9EAFA2B003D8C00CDC88F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AC9EAFC2B003D8C00CDC88F /* IntegralEyesight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IntegralEyesight.entitlements; sourceTree = "<group>"; };
 		3AC9EAFE2B003D8C00CDC88F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -45,6 +64,25 @@
 		3AC9EB0E2B003D8C00CDC88F /* IntegralEyesightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegralEyesightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC9EB122B003D8C00CDC88F /* IntegralEyesightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegralEyesightUITests.swift; sourceTree = "<group>"; };
 		3AC9EB142B003D8C00CDC88F /* IntegralEyesightUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegralEyesightUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3AC9EB222B0A75E500CDC88F /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
+		3AC9EB282B0A80EE00CDC88F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3AC9EB2C2B0A992600CDC88F /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		3AC9EB312B10ECD300CDC88F /* Vimeo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vimeo-Info.plist"; sourceTree = "<group>"; };
+		3AC9EB332B10EEEC00CDC88F /* VimeoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoViewModel.swift; sourceTree = "<group>"; };
+		3AC9EB352B10EFD000CDC88F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3AC9EB372B10F1A400CDC88F /* VimeoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoData.swift; sourceTree = "<group>"; };
+		3AC9EB3C2B1143C100CDC88F /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		3AC9EB3F2B1144CE00CDC88F /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
+		3AC9EB412B129A3300CDC88F /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
+		3AC9EB432B129F3B00CDC88F /* AnnouncementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementView.swift; sourceTree = "<group>"; };
+		3AC9EB462B13982000CDC88F /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		3AC9EB482B139A0B00CDC88F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		3AC9EB4A2B139E6900CDC88F /* CourseDetailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetailedView.swift; sourceTree = "<group>"; };
+		3AC9EB4C2B13FAA700CDC88F /* VideoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCardView.swift; sourceTree = "<group>"; };
+		3AC9EB4E2B140A9900CDC88F /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		3AC9EB542B15662600CDC88F /* FavoriteVideosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteVideosViewModel.swift; sourceTree = "<group>"; };
+		3AC9EB562B16C5FA00CDC88F /* VimeoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoServiceProtocol.swift; sourceTree = "<group>"; };
+		3AC9EB592B16C79300CDC88F /* VimeoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +133,12 @@
 		3AC9EAF52B003D8B00CDC88F /* IntegralEyesight */ = {
 			isa = PBXGroup;
 			children = (
-				3AC9EAF62B003D8B00CDC88F /* IntegralEyesightApp.swift */,
-				3AC9EAF82B003D8B00CDC88F /* ContentView.swift */,
+				3AC9EB452B13980400CDC88F /* ViewComponents */,
+				3AC9EB252B0A7C3100CDC88F /* Models */,
+				3AC9EB262B0A7C3700CDC88F /* ViewModels */,
+				3AC9EB242B0A7C2500CDC88F /* Views */,
+				3AC9EB272B0A7C4800CDC88F /* Utilities */,
+				3AC9EB312B10ECD300CDC88F /* Vimeo-Info.plist */,
 				3AC9EAFA2B003D8C00CDC88F /* Assets.xcassets */,
 				3AC9EAFC2B003D8C00CDC88F /* IntegralEyesight.entitlements */,
 				3AC9EAFD2B003D8C00CDC88F /* Preview Content */,
@@ -129,6 +171,77 @@
 			path = IntegralEyesightUITests;
 			sourceTree = "<group>";
 		};
+		3AC9EB242B0A7C2500CDC88F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB4E2B140A9900CDC88F /* VideoView.swift */,
+				3AC9EB4C2B13FAA700CDC88F /* VideoCardView.swift */,
+				3AC9EB4A2B139E6900CDC88F /* CourseDetailedView.swift */,
+				3AC9EAF62B003D8B00CDC88F /* IntegralEyesightApp.swift */,
+				3AC9EAF82B003D8B00CDC88F /* BaseView.swift */,
+				3AC9EB3C2B1143C100CDC88F /* CourseView.swift */,
+				3AC9EB2E2B0A9C2A00CDC88F /* TabViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3AC9EB252B0A7C3100CDC88F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB372B10F1A400CDC88F /* VimeoData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3AC9EB262B0A7C3700CDC88F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB582B16C67F00CDC88F /* VimeoService */,
+				3AC9EB542B15662600CDC88F /* FavoriteVideosViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3AC9EB272B0A7C4800CDC88F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB222B0A75E500CDC88F /* ColorTheme.swift */,
+				3AC9EB482B139A0B00CDC88F /* Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		3AC9EB2E2B0A9C2A00CDC88F /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB282B0A80EE00CDC88F /* HomeView.swift */,
+				3AC9EB2C2B0A992600CDC88F /* FavoritesView.swift */,
+				3AC9EB352B10EFD000CDC88F /* ProgressView.swift */,
+			);
+			path = TabViews;
+			sourceTree = "<group>";
+		};
+		3AC9EB452B13980400CDC88F /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB412B129A3300CDC88F /* ProfilePictureView.swift */,
+				3AC9EB3F2B1144CE00CDC88F /* CourseCardView.swift */,
+				3AC9EB462B13982000CDC88F /* ProfileView.swift */,
+				3AC9EB432B129F3B00CDC88F /* AnnouncementView.swift */,
+			);
+			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		3AC9EB582B16C67F00CDC88F /* VimeoService */ = {
+			isa = PBXGroup;
+			children = (
+				3AC9EB332B10EEEC00CDC88F /* VimeoViewModel.swift */,
+				3AC9EB562B16C5FA00CDC88F /* VimeoServiceProtocol.swift */,
+				3AC9EB592B16C79300CDC88F /* VimeoService.swift */,
+			);
+			path = VimeoService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AC9EB182B003D8C00CDC88F /* Build configuration list for PBXNativeTarget "IntegralEyesight" */;
 			buildPhases = (
+				3AC9EB212B098A7D00CDC88F /* Run Script */,
 				3AC9EAEF2B003D8B00CDC88F /* Sources */,
 				3AC9EAF02B003D8B00CDC88F /* Frameworks */,
 				3AC9EAF12B003D8B00CDC88F /* Resources */,
+				3AC9EB392B10FAD800CDC88F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -234,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AC9EAFF2B003D8C00CDC88F /* Preview Assets.xcassets in Resources */,
+				3AC9EB322B10ECD300CDC88F /* Vimeo-Info.plist in Resources */,
 				3AC9EAFB2B003D8C00CDC88F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,12 +370,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AC9EB212B098A7D00CDC88F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "PATH=/opt/homebrew/bin:$PATH\nif [ -f ~/kodeko.yml]; then\n  if which swiftlint >/dev/null; then\n    swiftlint --no-cache --config ~/com.raywenderlich.swiftlint.yml\n  fi\nfi\n";
+		};
+		3AC9EB392B10FAD800CDC88F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This script will create a Vimeo-Info.plist file when the project is first uploaded from github.\nCONFIG_FILE_BASE_NAME=\"Vimeo-Info\"\n\nCONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}.plist\nSAMPLE_CONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}-Sample.plist\n\nCONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/$CONFIG_FILE_NAME\nSAMPLE_CONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/$SAMPLE_CONFIG_FILE_NAME\n\nif [ -f \"$CONFIG_FILE_PATH\" ]; then\n  echo \"$CONFIG_FILE_PATH exists.\"\nelse\n  echo \"$CONFIG_FILE_PATH does not exist, copying sample\"\n  cp -v \"${SAMPLE_CONFIG_FILE_PATH}\" \"${CONFIG_FILE_PATH}\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AC9EAEF2B003D8B00CDC88F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC9EAF92B003D8B00CDC88F /* ContentView.swift in Sources */,
+				3AC9EB232B0A75E500CDC88F /* ColorTheme.swift in Sources */,
+				3AC9EB402B1144CE00CDC88F /* CourseCardView.swift in Sources */,
+				3AC9EB492B139A0B00CDC88F /* Extensions.swift in Sources */,
+				3AC9EB292B0A80EE00CDC88F /* HomeView.swift in Sources */,
+				3AC9EB2D2B0A992600CDC88F /* FavoritesView.swift in Sources */,
+				3AC9EB4F2B140A9900CDC88F /* VideoView.swift in Sources */,
+				3AC9EB5A2B16C79300CDC88F /* VimeoService.swift in Sources */,
+				3AC9EB4D2B13FAA700CDC88F /* VideoCardView.swift in Sources */,
+				3AC9EB342B10EEEC00CDC88F /* VimeoViewModel.swift in Sources */,
+				3AC9EB362B10EFD000CDC88F /* ProgressView.swift in Sources */,
+				3AC9EB552B15662600CDC88F /* FavoriteVideosViewModel.swift in Sources */,
+				3AC9EB422B129A3300CDC88F /* ProfilePictureView.swift in Sources */,
+				3AC9EB442B129F3B00CDC88F /* AnnouncementView.swift in Sources */,
+				3AC9EAF92B003D8B00CDC88F /* BaseView.swift in Sources */,
+				3AC9EB4B2B139E6900CDC88F /* CourseDetailedView.swift in Sources */,
+				3AC9EB3D2B1143C100CDC88F /* CourseView.swift in Sources */,
+				3AC9EB572B16C5FA00CDC88F /* VimeoServiceProtocol.swift in Sources */,
+				3AC9EB382B10F1A400CDC88F /* VimeoData.swift in Sources */,
+				3AC9EB472B13982000CDC88F /* ProfileView.swift in Sources */,
 				3AC9EAF72B003D8B00CDC88F /* IntegralEyesightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
