@@ -8,7 +8,7 @@
 import XCTest
 @testable import IntegralEyesight
 
-final class IntegralEyesightTests: XCTestCase {
+final class VimeoServiceTests: XCTestCase {
 
     var viewModel: VimeoViewModel!
         var mockService: MockVimeoService!
@@ -32,11 +32,14 @@ final class IntegralEyesightTests: XCTestCase {
                // Perform the action
                try await viewModel.fetchFoldersInRootFolder()
 
-               // Assert results if the call was successful
-               await Task { @MainActor in
-                   XCTAssertFalse(viewModel.isFetchFoldersInRootLoading)
-                   XCTAssertEqual(viewModel.foldersInRootFolder.count, 1)
-               }
+            // Await to hop back to the main thread for assertions
+                   await withCheckedContinuation { continuation in
+                       DispatchQueue.main.async {
+                           XCTAssertFalse(self.viewModel.isFetchFoldersInRootLoading)
+                           XCTAssertEqual(self.viewModel.foldersInRootFolder.count, 1)
+                           continuation.resume()
+                       }
+                   }
            } catch {
                // Handle errors
                XCTFail("Error fetching folders: \(error)")
@@ -61,4 +64,31 @@ final class IntegralEyesightTests: XCTestCase {
         }
     }
 
+    @MainActor 
+    func testGetLink() {
+        let mockService = MockVimeoService()
+        let viewModel = VimeoViewModel(service: mockService)
+
+        // Set up mock data
+        let expectedLink = "https://example.com/video.mp4"
+        mockService.mockLink = expectedLink
+
+        // Test
+        let video = Video.ExampleVideo
+        let link = viewModel.getLink(for: video, withQuality: "hd", andRendition: "1080p")
+        XCTAssertEqual(link, expectedLink, "The link should match the mock link")
+    }
+    func testGetImage() async throws {
+        let mockService = MockVimeoService()
+        let viewModel = await VimeoViewModel(service: mockService)
+
+        // Setup mock data
+        let expectedImage = UIImage(named: "testImage") // Replace with your test image
+        mockService.mockImage = expectedImage
+
+        // Perform the action
+        let image = try await viewModel.getImage(url: "some/image/url")
+
+        XCTAssertEqual(image, expectedImage, "The image should match the mock image")
+    }
 }
