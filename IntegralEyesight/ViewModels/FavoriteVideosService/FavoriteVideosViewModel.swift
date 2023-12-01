@@ -1,50 +1,46 @@
 import Foundation
+
 @MainActor
 class FavoriteVideosViewModel: ObservableObject {
     @Published var favoriteVideos: [Video] = []
+    private let storageService: FavoritesStorageServiceProtocol
 
-    init() {
+    init(storageService: FavoritesStorageServiceProtocol = FavoritesStorageService()) {
+        self.storageService = storageService
         loadFavoriteVideos()
     }
 
-    func contains(_ video: Video) -> Bool {
-        return favoriteVideos.contains(where: { $0.uri == video.uri })
+    public func contains(_ video: Video) -> Bool {
+        favoriteVideos.contains { $0.uri == video.uri }
     }
 
     func add(_ video: Video) {
         objectWillChange.send()
         if !contains(video) {
-            favoriteVideos.append(video)
-            saveFavoriteVideos()
+            do {
+                try storageService.add(video)
+                loadFavoriteVideos()
+            } catch {
+                print("Error adding video: \(error)")
+            }
         }
     }
 
     func remove(_ video: Video) {
         objectWillChange.send()
-        favoriteVideos.removeAll { $0.uri == video.uri }
-        saveFavoriteVideos()
-    }
-
-    private func saveFavoriteVideos() {
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(favoriteVideos) {
-            let fileURL = getFavoritesFileURL()
-            try? encoded.write(to: fileURL)
+        do {
+            try storageService.remove(video)
+            loadFavoriteVideos()
+        } catch {
+            print("Error removing video: \(error)")
         }
     }
 
     private func loadFavoriteVideos() {
-        let fileURL = getFavoritesFileURL()
-        if let data = try? Data(contentsOf: fileURL) {
-            let decoder = JSONDecoder()
-            if let loadedVideos = try? decoder.decode([Video].self, from: data) {
-                favoriteVideos = loadedVideos
-            }
+        do {
+            favoriteVideos = try storageService.loadFavoriteVideos()
+        } catch {
+            print("Error loading favorite videos: \(error)")
         }
-    }
-
-    private func getFavoritesFileURL() -> URL {
-        let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-        return documentDirectory.appendingPathComponent("favoriteVideos.json")
     }
 }

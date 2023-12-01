@@ -60,6 +60,17 @@
                ReferencedContainer = "container:IntegralEyesight.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "3AC9EB6A2B18324500CDC88F"
+               BuildableName = "IntegralEyesightUnitTests.xctest"
+               BlueprintName = "IntegralEyesightUnitTests"
+               ReferencedContainer = "container:IntegralEyesight.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

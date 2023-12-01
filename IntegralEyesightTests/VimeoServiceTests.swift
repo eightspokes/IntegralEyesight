@@ -91,4 +91,5 @@ final class VimeoServiceTests: XCTestCase {
 
         XCTAssertEqual(image, expectedImage, "The image should match the mock image")
     }
+    
 }

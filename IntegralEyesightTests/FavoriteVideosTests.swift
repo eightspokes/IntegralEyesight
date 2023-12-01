@@ -8,6 +8,7 @@
 import XCTest
 @testable import IntegralEyesight
 final class FavoriteVideosTests: XCTestCase {
+
     var viewModel: FavoriteVideosViewModel!
         var mockStorageService: MockFavoritesStorageService!
 
@@ -29,9 +30,15 @@ final class FavoriteVideosTests: XCTestCase {
             XCTAssertFalse(viewModel.favoriteVideos.contains(testVideo))
             XCTAssertFalse(mockStorageService.saveWasCalled)
 
-            try? viewModel.add(testVideo)
+             viewModel.add(testVideo)
 
             XCTAssertTrue(viewModel.favoriteVideos.contains(testVideo))
         }
-
+   @MainActor func testRemoveVideo() {
+        let testVideo = Video.ExampleVideo
+          viewModel.add(testVideo)
+         XCTAssertTrue(viewModel.favoriteVideos.contains(testVideo))
+         viewModel.remove(testVideo)
+         XCTAssertFalse(viewModel.favoriteVideos.contains(testVideo))
+     }
 }
