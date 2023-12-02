@@ -25,5 +25,9 @@ Favorites: Users can save their favorite videos to a personalized list, making i
 - AVPlayer was used to play videos from Vimeo
 - The project utilized Kodeko's SwiftLint config file.
 
+## Test
+Unit tests cover mmost of the business logic of the app. UI tests not implemented. Currenlty test coverage is at 56%
+
+
 ## Bugs
 File manager (Apps internal storage) confirmed to work correctly on iPhone 15 pro max simulator. The app can't find the storage file on other types of iPhones. Needs investigation. 
