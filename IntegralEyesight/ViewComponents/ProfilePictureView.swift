@@ -11,15 +11,15 @@ import SwiftUI
 struct ProfilePictureView: View {
     /// The name of the image to be displayed.
     var image: String?
-    
-    /// Computed property that returns the actual image name to be used.
+
+
     var profileImage: String {
         if let image = image {
             return image
         }
         return "default-icon"
     }
-    
+
     var body: some View {
         VStack {
             Image(profileImage)

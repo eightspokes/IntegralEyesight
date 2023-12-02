@@ -16,9 +16,7 @@
 		3AC9EB2D2B0A992600CDC88F /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB2C2B0A992600CDC88F /* FavoritesView.swift */; };
 		3AC9EB322B10ECD300CDC88F /* Vimeo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9EB312B10ECD300CDC88F /* Vimeo-Info.plist */; };
 		3AC9EB342B10EEEC00CDC88F /* VimeoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB332B10EEEC00CDC88F /* VimeoViewModel.swift */; };
-		3AC9EB362B10EFD000CDC88F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB352B10EFD000CDC88F /* ProgressView.swift */; };
 		3AC9EB382B10F1A400CDC88F /* VimeoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB372B10F1A400CDC88F /* VimeoData.swift */; };
-		3AC9EB3D2B1143C100CDC88F /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB3C2B1143C100CDC88F /* CourseView.swift */; };
 		3AC9EB402B1144CE00CDC88F /* CourseCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB3F2B1144CE00CDC88F /* CourseCardView.swift */; };
 		3AC9EB422B129A3300CDC88F /* ProfilePictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB412B129A3300CDC88F /* ProfilePictureView.swift */; };
 		3AC9EB442B129F3B00CDC88F /* AnnouncementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB432B129F3B00CDC88F /* AnnouncementView.swift */; };
@@ -37,6 +35,7 @@
 		3AC9EB8A2B1838FA00CDC88F /* VimeoServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB082B003D8C00CDC88F /* VimeoServiceTests.swift */; };
 		3AC9EB8B2B1838FF00CDC88F /* FavoriteVideosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB632B18272100CDC88F /* FavoriteVideosTests.swift */; };
 		3AC9EB8D2B19615A00CDC88F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AC9EB8C2B19615A00CDC88F /* Launch Screen.storyboard */; };
+		3AC9EB8F2B1AC4DB00CDC88F /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC9EB8E2B1AC4DB00CDC88F /* ProgressView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,9 +61,7 @@
 		3AC9EB2C2B0A992600CDC88F /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		3AC9EB312B10ECD300CDC88F /* Vimeo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vimeo-Info.plist"; sourceTree = "<group>"; };
 		3AC9EB332B10EEEC00CDC88F /* VimeoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoViewModel.swift; sourceTree = "<group>"; };
-		3AC9EB352B10EFD000CDC88F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		3AC9EB372B10F1A400CDC88F /* VimeoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VimeoData.swift; sourceTree = "<group>"; };
-		3AC9EB3C2B1143C100CDC88F /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		3AC9EB3F2B1144CE00CDC88F /* CourseCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCardView.swift; sourceTree = "<group>"; };
 		3AC9EB412B129A3300CDC88F /* ProfilePictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePictureView.swift; sourceTree = "<group>"; };
 		3AC9EB432B129F3B00CDC88F /* AnnouncementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementView.swift; sourceTree = "<group>"; };
@@ -83,6 +80,7 @@
 		3AC9EB652B18281600CDC88F /* MockFavoritesStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFavoritesStorageService.swift; sourceTree = "<group>"; };
 		3AC9EB812B18376F00CDC88F /* IntegralEyesightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IntegralEyesightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AC9EB8C2B19615A00CDC88F /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		3AC9EB8E2B1AC4DB00CDC88F /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +161,6 @@
 				3AC9EB4A2B139E6900CDC88F /* CourseDetailedView.swift */,
 				3AC9EAF62B003D8B00CDC88F /* IntegralEyesightApp.swift */,
 				3AC9EAF82B003D8B00CDC88F /* BaseView.swift */,
-				3AC9EB3C2B1143C100CDC88F /* CourseView.swift */,
 				3AC9EB2E2B0A9C2A00CDC88F /* TabViews */,
 			);
 			path = Views;
@@ -200,7 +197,7 @@
 			children = (
 				3AC9EB282B0A80EE00CDC88F /* HomeView.swift */,
 				3AC9EB2C2B0A992600CDC88F /* FavoritesView.swift */,
-				3AC9EB352B10EFD000CDC88F /* ProgressView.swift */,
+				3AC9EB8E2B1AC4DB00CDC88F /* ProgressView.swift */,
 			);
 			path = TabViews;
 			sourceTree = "<group>";
@@ -391,18 +388,17 @@
 				3AC9EB5D2B16DF5500CDC88F /* MockVimeoService.swift in Sources */,
 				3AC9EB4D2B13FAA700CDC88F /* VideoCardView.swift in Sources */,
 				3AC9EB342B10EEEC00CDC88F /* VimeoViewModel.swift in Sources */,
-				3AC9EB362B10EFD000CDC88F /* ProgressView.swift in Sources */,
 				3AC9EB552B15662600CDC88F /* FavoriteVideosViewModel.swift in Sources */,
 				3AC9EB422B129A3300CDC88F /* ProfilePictureView.swift in Sources */,
 				3AC9EB442B129F3B00CDC88F /* AnnouncementView.swift in Sources */,
 				3AC9EAF92B003D8B00CDC88F /* BaseView.swift in Sources */,
 				3AC9EB602B18245300CDC88F /* FavoritesStorageServiceProtocol.swift in Sources */,
 				3AC9EB4B2B139E6900CDC88F /* CourseDetailedView.swift in Sources */,
-				3AC9EB3D2B1143C100CDC88F /* CourseView.swift in Sources */,
 				3AC9EB572B16C5FA00CDC88F /* VimeoServiceProtocol.swift in Sources */,
 				3AC9EB382B10F1A400CDC88F /* VimeoData.swift in Sources */,
 				3AC9EB622B1824A600CDC88F /* FavoritesStorageService.swift in Sources */,
 				3AC9EB472B13982000CDC88F /* ProfileView.swift in Sources */,
+				3AC9EB8F2B1AC4DB00CDC88F /* ProgressView.swift in Sources */,
 				3AC9EAF72B003D8B00CDC88F /* IntegralEyesightApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

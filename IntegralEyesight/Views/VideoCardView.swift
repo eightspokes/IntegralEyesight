@@ -11,31 +11,41 @@ struct VideoCardView: View {
     var video: Video
     let sampleImageUrl = "/users/47826142/pictures/11187135"
     @EnvironmentObject var vimeoViewModel: VimeoViewModel
-    @State var  image: UIImage?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    @Environment(\.verticalSizeClass) var verticalSizeClass
+    @State var image: UIImage?
+
     var body: some View {
+        let isLandscape = horizontalSizeClass == .regular && verticalSizeClass == .compact
+        let frameHeight: CGFloat = isLandscape ? 280 : 400 // 30% smaller in landscape
+
         ZStack {
-            ZStack(alignment: .bottomLeading){
+            ZStack(alignment: .bottomLeading) {
                 Rectangle()
                     .foregroundColor(.gray.opacity(0.3))
-                    .frame(height: 400)
+                    .frame(height: frameHeight)
                     .cornerRadius(30)
-                    .padding(.horizontal,30)
-                if let image {
-                    Image(uiImage: image)
-                }else{
-                    // Text("Image in nil")
-                }
+                    .padding(isLandscape ? .horizontal : .all)
+
+                Image(video.name)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: frameHeight)
+                    .cornerRadius(30)
+                    .padding(isLandscape ? .horizontal : .all)
+
                 Text(video.name)
-                    .padding(.horizontal,50)
-                    .padding(.vertical,20)
+                    .padding(.horizontal, 50)
+                    .padding(.vertical, 20)
             }
-            .task{
-                do{
+            .task {
+                do {
                     image = try await vimeoViewModel.getImage(url: sampleImageUrl)
-                }catch{
+                } catch {
                     print("Error getting image")
                 }
             }
+
             Image(systemName: "play.fill")
                 .foregroundStyle(.white)
                 .font(.title)
@@ -46,8 +56,9 @@ struct VideoCardView: View {
     }
 }
 
+
 #Preview {
     VideoCardView(video: Video.ExampleVideo)
         .environmentObject(VimeoViewModel(service: VimeoService()))
-
+    
 }

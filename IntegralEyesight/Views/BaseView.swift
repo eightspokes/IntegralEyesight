@@ -15,16 +15,19 @@ struct BaseView: View {
 
     var body: some View {
 
-        
+
         TabView{
             HomeView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+            ///TODO
+            /*
             ProgressView()
                 .tabItem {
                     Label("Progress", systemImage: "calendar")
                 }
+             */
             FavoritesView()
                 .tabItem {
                     Label("Favorites", systemImage: "heart")
@@ -32,7 +35,7 @@ struct BaseView: View {
 
 
         }
-            .accentColor(ColorTheme.textColor)
+        .accentColor(ColorTheme.textColor)
     }
 }
 
@@ -42,6 +45,6 @@ struct BaseView: View {
             .environmentObject(VimeoViewModel(service: VimeoService()))
             .environmentObject(FavoriteVideosViewModel())
             .preferredColorScheme(.dark)
-        
+
     }
 }

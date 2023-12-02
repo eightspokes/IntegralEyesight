@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+
 final class VimeoService: VimeoServiceProtocol {
     private let baseUrl = "https://api.vimeo.com"
 

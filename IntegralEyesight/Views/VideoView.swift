@@ -12,25 +12,25 @@ struct VideoView: View {
     @State private var player = AVPlayer()
     @EnvironmentObject var vimeoViewModel: VimeoViewModel
     @EnvironmentObject var favorites: FavoriteVideosViewModel
-
-
+    
+    
     var body: some View {
-
+        
         ZStack(alignment: .topLeading) {
             VideoPlayer(player:player)
                 .edgesIgnoringSafeArea(.all)
                 .onAppear{
-
+                    
                     if let link = vimeoViewModel.getLink(for: video, withQuality: "sd", andRendition: "360p"){
                         player = AVPlayer(url: URL(string: link)!)
                         let playerViewController = AVPlayerViewController()
                         playerViewController.player = player
                         player.play()
                     }
-            }
-
+                }
+            
             Button{
-
+                
                 if favorites.contains(video){
                     favorites.remove(video)
                 }else{
@@ -38,19 +38,19 @@ struct VideoView: View {
                 }
             }label: {
                 Group {
-                            if favorites.contains(video) {
-                                Image(systemName: "heart.fill")
-                                   .foregroundColor(.red)
-                            } else {
-                                    Image(systemName: "heart")
-                                        .foregroundColor(.red)
-                            }
-                        }
-                        .padding(.horizontal)
-                        .padding(.vertical,5)
-                        .font(.title)
-                        .transition(.scale) // Transition effect for both states
-                        .animation(.easeInOut(duration: 0.3), value: favorites.contains(video))
+                    if favorites.contains(video) {
+                        Image(systemName: "heart.fill")
+                            .foregroundColor(.red)
+                    } else {
+                        Image(systemName: "heart")
+                            .foregroundColor(.red)
+                    }
+                }
+                .padding(.horizontal)
+                .padding(.vertical,5)
+                .font(.title)
+                .transition(.scale) // Transition effect for both states
+                .animation(.easeInOut(duration: 0.3), value: favorites.contains(video))
             }
         }
     }

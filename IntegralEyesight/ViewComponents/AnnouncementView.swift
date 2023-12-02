@@ -9,20 +9,19 @@ import SwiftUI
 
 struct AnnouncementView: View {
     @Environment(\.colorScheme) var colorScheme
+    @Binding var isRegistered: Bool
     let titleText: String
     let bodyText: String
     
     var body: some View {
         ZStack(alignment: .topLeading) { // Aligns children to the top leading corner
             Rectangle()
-                .foregroundColor( colorScheme == .dark ? ColorTheme.backgroundColor.lighter(by: 20) : ColorTheme.backgroundColor.darker(by: 20)) // Gives the rectangle a color to be visible
+                .foregroundColor( colorScheme == .dark ? ColorTheme.backgroundColor.lighter(by: 20) : ColorTheme.backgroundColor.darker(by: 20)) 
                 .frame(height: 130)
                 .cornerRadius(10)
                 .padding()
             
             VStack(alignment: .leading) {
-                
-                
                 Text(titleText)
                     .font(.headline).bold()
                 
@@ -30,9 +29,9 @@ struct AnnouncementView: View {
                 
                 HStack{
                     Spacer()
-                    Button{
-                        
-                    }label: {
+                    Button {
+                        //TODO Implement functionality
+                    } label: {
                         Text("Register")
                             .bold()
                             .frame(width: 150, height: 25)
@@ -49,7 +48,8 @@ struct AnnouncementView: View {
 }
 
 #Preview {
-    AnnouncementView(titleText: "Registration for the next Vision Tune Up series is now open!", bodyText: "November 1st – 30th, 2023")
+
+    AnnouncementView(isRegistered: .constant(false), titleText: "Registration for the next Vision Tune Up series is now open!", bodyText: "November 1st – 30th, 2023")
         .preferredColorScheme(.dark)
 }
 

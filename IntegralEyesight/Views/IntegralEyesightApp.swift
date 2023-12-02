@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct IntegralEyesightApp: App {
-    
+
     @StateObject var vimeoViewModel = VimeoViewModel(service: VimeoService())
     @StateObject var favorites = FavoriteVideosViewModel()
     var body: some Scene {

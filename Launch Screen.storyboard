@@ -22,13 +22,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" verticalHuggingPriority="251" misplaced="YES" text="Integral Eyesight   Improvement" textAlignment="center" lineBreakMode="middleTruncation" numberOfLines="2" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="56" y="415" width="280.99999999988131" height="79.000000000000227"/>
+                                <rect key="frame" x="74" y="417" width="280.99999999988131" height="79.000000000000227"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView verifyAmbiguity="ignoreSizes" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="187" placeholderIntrinsicHeight="235" insetsLayoutMarginsFromSafeArea="NO" image="AppIconWhite" id="60O-Uy-yyz">
-                                <rect key="frame" x="109" y="193" width="174" height="214"/>
+                                <rect key="frame" x="109" y="160" width="174" height="214"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="206" id="n3L-gI-eML"/>

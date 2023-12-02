@@ -2,7 +2,7 @@
 //  ProgressView.swift
 //  IntegralEyesight
 //
-//  Created by Roman Kozulia on 11/24/23.
+//  Created by Roman Kozulia on 12/1/23.
 //
 
 import SwiftUI
