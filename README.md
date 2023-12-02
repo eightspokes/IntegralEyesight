@@ -24,3 +24,6 @@ Favorites: Users can save their favorite videos to a personalized list, making i
 - Api keys are stored in Plist file
 - AVPlayer was used to play videos from Vimeo
 - The project utilized Kodeko's SwiftLint config file.
+
+## Bugs
+File manager (Apps internal storage) confirmed to work correctly on iPhone 15 pro max simulator. The app can't find the storage file on other types of iPhones. Needs investigation. 
