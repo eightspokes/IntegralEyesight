@@ -1,15 +1,14 @@
-//
-//  FavoritesView.swift
-//  IntegralEyesight
-//
-//  Created by Roman Kozulia on 11/19/23.
-//
-
 import SwiftUI
 
+/// A view for displaying the user's favorite videos.
+///
+/// This view shows a list of favorite videos using `FavoriteVideosViewModel`.
+/// Each video is presented as a `VideoCardView`, and users can navigate to a detailed view for each video.
 struct FavoritesView: View {
+    /// The view model for managing favorite videos.
     @EnvironmentObject var favorites: FavoriteVideosViewModel
 
+    /// The content and behavior of the view.
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -25,6 +24,7 @@ struct FavoritesView: View {
         }
     }
 }
+
 
 #Preview {
     FavoritesView()

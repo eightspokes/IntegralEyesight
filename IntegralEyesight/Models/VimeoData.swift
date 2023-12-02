@@ -1,6 +1,6 @@
 import Foundation
 
-//Structure we expect when we try to get data from the root Vimeo Folder
+/// Represents the response structure when fetching data from the root Vimeo folder.
 struct RootFolderResponse: Codable {
     let total: Int
     let page: Int
@@ -14,6 +14,7 @@ struct RootFolderResponse: Codable {
     }
 }
 
+/// Contains pagination information for traversing through lists of data.
 struct Paging: Codable {
     let next: String?
     let previous: String?
@@ -21,11 +22,13 @@ struct Paging: Codable {
     let last: String
 }
 
+/// Represents data about a specific folder in the Vimeo API response.
 struct FolderData: Codable {
     let type: String
     let folder: Folder
 }
 
+/// Represents details of a folder in the Vimeo API response.
 struct Folder: Codable {
     let createdTime: String
     let modifiedTime: String
@@ -46,11 +49,12 @@ struct Folder: Codable {
     }
 }
 
+/// Represents privacy settings of a Vimeo folder.
 struct Privacy: Codable {
     let view: String
 }
 
-//Structure we expect when we try to get videos from a folder that contains Course materials
+/// Represents the response structure when fetching videos from a folder containing course materials on Vimeo.
 struct VideosOfACourseResponse: Codable {
     let total: Int
     let page: Int
@@ -65,11 +69,13 @@ struct VideosOfACourseResponse: Codable {
     }
 }
 
+/// Represents a video item in the Vimeo API response.
 struct VideoItem: Codable {
     let type: String
     let video: Video
 }
 
+/// Represents file details of a video on Vimeo.
 struct File: Codable, Hashable {
     let quality: String
     let rendition: String
@@ -82,6 +88,7 @@ struct File: Codable, Hashable {
     let md5: String?
 }
 
+/// Represents details of a video on Vimeo.
 struct Video: Codable, Hashable {
     let uri: String
     let name: String
@@ -101,6 +108,7 @@ struct Video: Codable, Hashable {
     }
 }
 
+/// Represents embedded HTML for a video on Vimeo.
 struct Embed: Codable {
     let html: String
 }

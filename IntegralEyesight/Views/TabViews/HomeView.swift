@@ -1,71 +1,74 @@
-//
-//  HomeView.swift
-//  IntegralEyesight
-//
-//  Created by Roman Kozulia on 11/19/23.
-//
-
 import SwiftUI
 
+/// The home view for the `IntegralEyesight` app.
+///
+/// This view displays the main content of the home screen, including a profile view,
+/// an announcement section, and a scrollable list of course folders fetched from the Vimeo API.
+/// It conditionally shows an announcement view if the user is not registered for an event
+/// and displays course folders using `CourseCard`.
 struct HomeView: View {
+    /// The title for the announcement section.
     let announcementTitle = "Registration for the next Vision Tune Up series is now open!"
+
+    /// The body text for the announcement section.
     let announcementBody = "November 1st – 30th, 2023"
+
+    /// State to track if the user is registered for an event.
     @State var isRegisteredForEvent = false
 
-
+    /// The view model to interact with Vimeo services.
     @EnvironmentObject var vimeoViewModel: VimeoViewModel
-    // Environment property to detect the color scheme
+
+    /// The color scheme of the environment.
     @Environment(\.colorScheme) var colorScheme
 
+    /// The content and behavior of the view.
     var body: some View {
-
         NavigationStack {
-            ZStack{
+            ZStack {
                 ColorTheme.backgroundColor.ignoresSafeArea()
-                //App logo and Profile picture
+
                 VStack {
                     ProfileView()
-                    if !isRegisteredForEvent{
+                    if !isRegisteredForEvent {
                         AnnouncementView(isRegistered: $isRegisteredForEvent, titleText: announcementTitle, bodyText: announcementBody)
 
                         if !vimeoViewModel.isFetchFoldersInRootLoading {
                             ScrollView(.vertical) {
-                                ForEach(vimeoViewModel.foldersInRootFolder, id: \.name){ folder in
-                                    if folder.name != "Legal Disclaimer"{
-                                        NavigationLink{
+                                ForEach(vimeoViewModel.foldersInRootFolder, id: \.name) { folder in
+                                    if folder.name != "Legal Disclaimer" {
+                                        NavigationLink {
                                             CourseDetailedView(courseName: folder.name, videosUri: folder.uri)
                                         } label: {
-                                            VStack(alignment: .leading){
+                                            VStack(alignment: .leading) {
                                                 Text(folder.name)
                                                     .font(.title)
                                                     .foregroundColor(ColorTheme.textColor)
                                                 CourseCard(cardImage: folder.name)
                                             }
-
                                         }
                                     }
                                 }
-
-                            }.padding(.horizontal)
-
-
-                        }else{
+                            }
+                             .padding(.horizontal)
+                        } else {
                             ProgressView()
                             Spacer()
                         }
                     }
                 }
                 .task {
-                    do{
+                    do {
                         try await vimeoViewModel.fetchFoldersInRootFolder()
-                    }catch{
-                        print("Error fetching folders from Vimeo API\(error.localizedDescription)")
+                    } catch {
+                        print("Error fetching folders from Vimeo API: \(error.localizedDescription)")
                     }
                 }
             }
         }
     }
 }
+
 
 #Preview {
     HomeView()
