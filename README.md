@@ -26,7 +26,7 @@ Note! The heart is animated!
 - The project utilized Kodeko's SwiftLint config file.
 
 ## Test
-Unit tests cover mmost of the business logic of the app. UI tests not implemented. Currenlty test coverage is at 56%
+Unit tests cover most of the business logic of the app. UI tests not implemented. Currenlty test coverage is at 56%
 
 
 ## Bugs
