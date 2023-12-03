@@ -13,7 +13,7 @@ Learn more: https://integraleyesight.com
 Comprehensive Courses: The app features a range of meticulously curated courses, complete with instructional videos that provide self-directed guidance on improving eyesight. These resources are crafted to assist users at every step of their journey towards better vision.
 Event Registration: Stay updated with the latest events and workshops. The app allows users to seamlessly register for upcoming events related to vision improvement, ensuring they never miss an opportunity to learn more and engage with the community.
 Favorites: Users can save their favorite videos to a personalized list, making it convenient to revisit and rewatch them anytime. This feature enhances the learning experience by allowing easy access to preferred content for continuous learning and practice.
-
+Note! The heart is animated! 
 
 ## App Architecture
 
